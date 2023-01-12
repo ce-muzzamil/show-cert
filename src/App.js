@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import CourseList from './certList'
+import {Landing, Contact} from './landing'
+import { specializations, courses, seminars, degrees } from './courses.js'
 
-function App() {
+function App () {
+  let subjects = courses
+    .map(courses => {
+      return courses.type
+    })
+    .filter((v, i, a) => a.indexOf(v) === i)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Landing />
+      <div className='tc' id='certifications'>
+        {<CourseList key='Degree' courseList={degrees} subject='Degree' />}
+        {
+          <CourseList
+            key='Specialization'
+            courseList={specializations}
+            subject='Specialization'
+          />
+        }
+        {subjects.map(subject => {
+          return (
+            <CourseList
+              key={subject}
+              courseList={courses.filter((v, i) => v.type === subject)}
+              subject={subject}
+            />
+          )
+        })}
+        {<CourseList key='Seminars' courseList={seminars} subject='Seminars' />}
+      </div>
+      <Contact/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
