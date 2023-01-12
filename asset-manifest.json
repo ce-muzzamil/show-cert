@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/github.io/show-cert/static/css/main.d0151c1a.css",
+    "main.js": "/github.io/show-cert/static/js/main.c928d1f6.js",
+    "static/js/787.acdfb32a.chunk.js": "/github.io/show-cert/static/js/787.acdfb32a.chunk.js",
+    "static/media/linkedin.svg": "/github.io/show-cert/static/media/linkedin.bbe6628d9cd2f644f8e833e27eeb6381.svg",
+    "static/media/github.svg": "/github.io/show-cert/static/media/github.94a6f84a235d84fa7dcf39ff6f456b7d.svg",
+    "index.html": "/github.io/show-cert/index.html",
+    "static/media/top.svg": "/github.io/show-cert/static/media/top.84f2cc280b78f1beff40671f3c397a23.svg",
+    "static/media/mail.svg": "/github.io/show-cert/static/media/mail.a5c965bb61c443ec836a2fe28f430fa8.svg",
+    "static/media/upwork.svg": "/github.io/show-cert/static/media/upwork.51fec4cf565ef4637bcbd618a2570f89.svg",
+    "static/media/freelancer.svg": "/github.io/show-cert/static/media/freelancer.d6c37d61a243e140d2b008070115255e.svg",
+    "main.d0151c1a.css.map": "/github.io/show-cert/static/css/main.d0151c1a.css.map",
+    "main.c928d1f6.js.map": "/github.io/show-cert/static/js/main.c928d1f6.js.map",
+    "787.acdfb32a.chunk.js.map": "/github.io/show-cert/static/js/787.acdfb32a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d0151c1a.css",
+    "static/js/main.c928d1f6.js"
+  ]
+}
