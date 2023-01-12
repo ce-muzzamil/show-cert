@@ -13,17 +13,28 @@ const handleClickScroll = id => {
   }
 }
 
-function Landing () {
-  if (window.innerWidth < 700) {
-    const element1 = document.getElementById('top')
-    element1.style.borderRadius = '0px'
-    const element2 = document.getElementById('bottom')
-    element2.style.borderRadius = '0px'
+const isScreenBig = ()=>{
+  if (window.innerWidth < 700){
+    return false
   }
+  else{
+    return true
+  }
+}
+
+function Landing () {
+  // if (window.innerWidth < 700) {
+  //   const element1 = document.getElementById('top')
+  //   if (element1)
+  //     element1.style.borderRadius = '0px'
+  //   const element2 = document.getElementById('bottom')
+  //   if (element2)
+  //     element2.style.borderRadius = '0px'
+  // }
 
   return (
     <div
-      className='landing gradient full-height upper-border flex inline-wrap justify-center'
+      className={'landing gradient full-height flex inline-wrap justify-center'.concat(isScreenBig()?' upper-border':'')}
       id='top'
     >
       <div className='dib ml10 pl10'>
@@ -64,7 +75,7 @@ function Landing () {
 
 function Contact () {
   return (
-    <div className='gradient lower-border half-height mt3 tc' id='bottom'>
+    <div className={'gradient half-height mt3 tc'.concat(isScreenBig()?' lower-border':'')} id='bottom'>
       <div className='h-25'>
         <img
           src={topIcon}
