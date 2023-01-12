@@ -8,7 +8,7 @@ function CourseCard ({ course }) {
     key = course.title
   } else if (course.type === 'Degree') {
     key = course.title
-    style.minWidth = 560
+    style.maxWidth = 560
   } else {
     key = course.certificate.split('/')
     key = key[key.length - 1]

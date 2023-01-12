@@ -14,45 +14,57 @@ const handleClickScroll = id => {
 }
 
 function Landing () {
+  if (window.innerWidth < 700) {
+    const element1 = document.getElementById('top')
+    element1.style.borderRadius = '0px'
+    const element2 = document.getElementById('bottom')
+    element2.style.borderRadius = '0px'
+  }
+
   return (
-    <div className='landing gradient full-height upper-border' id='top'>
-      <div className='flex inline-wrap justify-center'>
-        <div className='dib ml6'>
-          <h1 className='f1 near-white'>
-            Hi! I am <span className='yellow'>Muzzamil</span>, a Civil Engineer,
-            Software Developer and Data Scientist.
-          </h1>
-          <div className='flex inline-wrap'>
-            <a
-              href='https://pern-my.sharepoint.com/:b:/g/personal/muhammad_1171430_talmeez_pk/EVfiuFO5bpdDg14rx6U2-wcBhi1ANoiapIp71523unyp4A?e=cPGyqo'
-              download='muzzamil resume.pdf'
-              target='_blank'
-              rel='noreferrer'
-              className='no-underline'
-            >
-              <h4 className='f4 grow no-underline br-pill ba ph4 pv3 w25 yellow tc pointer'>
-                View Resume
-              </h4>
-            </a>
-
-            <h4
-              className='f4 grow no-underline br-pill ba ph4 pv3 w25 yellow ml2 tc pointer'
-              onClick={() => handleClickScroll('certifications')}
-            >
-              View Cerificates
+    <div
+      className='landing gradient full-height upper-border flex inline-wrap justify-center'
+      id='top'
+    >
+      <div className='dib ml10 pl10'>
+        <h1 className='intro near-white'>
+          Hi! I am <span className='yellow'>Muzzamil</span>, a Civil Engineer,
+          Software Developer and Data Scientist.
+        </h1>
+        <div className='flex inline-wrap'>
+          <a
+            href='https://pern-my.sharepoint.com/:b:/g/personal/muhammad_1171430_talmeez_pk/EVfiuFO5bpdDg14rx6U2-wcBhi1ANoiapIp71523unyp4A?e=cPGyqo'
+            download='muzzamil resume.pdf'
+            target='_blank'
+            rel='noreferrer'
+            className='no-underline'
+          >
+            <h4 className='f6 grow no-underline br-pill ba ph2 pv2 w25 yellow tc pointer'>
+              View Resume
             </h4>
-          </div>
-        </div>
+          </a>
 
-        <img src='avatar.jpg' alt='Muzzamil' className='avatar grow dib mr6' />
+          <h4
+            className='f6 grow no-underline br-pill ba ph2 pv2 w25 yellow ml2 tc pointer'
+            onClick={() => handleClickScroll('certifications')}
+          >
+            View Cerificates
+          </h4>
+        </div>
       </div>
+
+      <img
+        src='avatar.jpg'
+        alt='Muzzamil'
+        className='avatar grow dib mr10 pr10'
+      />
     </div>
   )
 }
 
 function Contact () {
   return (
-    <div className='gradient lower-border half-height mt3 tc'>
+    <div className='gradient lower-border half-height mt3 tc' id='bottom'>
       <div className='h-25'>
         <img
           src={topIcon}

@@ -1,6 +1,7 @@
 import CourseList from './certList'
 import {Landing, Contact} from './landing'
 import { specializations, courses, seminars, degrees } from './courses.js'
+import './App.css'
 
 function App () {
   let subjects = courses
@@ -10,7 +11,7 @@ function App () {
     .filter((v, i, a) => a.indexOf(v) === i)
 
   return (
-    <div>
+    <div className='container'>
       <Landing />
       <div className='tc' id='certifications'>
         {<CourseList key='Degree' courseList={degrees} subject='Degree' />}
